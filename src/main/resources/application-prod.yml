@@ -49,12 +49,4 @@ logging:
     com.kopo_team4.auth_backend: INFO
 
 
-# Actuator 메트릭스 설정
-management:
-  metrics:
-    enabled: false
-  endpoints:
-    enabled-by-default: false
-    web:
-      exposure:
-        include: health
+# Actuator 의존성 제거로 인해 설정 불필요
