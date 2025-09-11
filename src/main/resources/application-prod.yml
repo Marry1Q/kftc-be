@@ -4,8 +4,8 @@ server:
 spring:
   datasource:
     url: jdbc:${MYSQL_URL}
-    username: ${MYSQL_USER}
-    password: ${MYSQL_PASSWORD}
+    username: ${MYSQLUSER}
+    password: ${MYSQLPASSWORD}
     driver-class-name: com.mysql.cj.jdbc.Driver
     hikari:
       minimum-idle: 2
