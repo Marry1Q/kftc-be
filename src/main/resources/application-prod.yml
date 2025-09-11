@@ -35,18 +35,15 @@ spring:
 jwt:
   secret-key: ${JWT_SECRET_KEY}
 
-# Swagger/OpenAPI 설정 (프로덕션에서는 보안상 비활성화 권장)
+# Swagger/OpenAPI 설정 (개발/테스트용으로 활성화)
 springdoc:
   api-docs:
-    enabled: false
+    enabled: true
   swagger-ui:
-    enabled: false
+    enabled: true
 
 # 프로덕션 로깅 설정
 logging:
   level:
     root: INFO
     com.kopo_team4.auth_backend: INFO
-
-
-# Actuator 의존성 제거로 인해 설정 불필요
