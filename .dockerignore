@@ -1,0 +1,40 @@
+# Git 관련
+.git
+.gitignore
+.gitattributes
+
+# IDE 관련
+.idea
+.vscode
+*.iml
+*.ipr
+*.iws
+
+# OS 관련
+.DS_Store
+Thumbs.db
+
+# Gradle 관련
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# 로그 파일
+*.log
+
+# 임시 파일
+*.tmp
+*.temp
+
+# 테스트 관련
+src/test/
+
+# 문서
+README.md
+*.md
+
+# 기타
+node_modules
+.env
+.env.local
+.env.production
