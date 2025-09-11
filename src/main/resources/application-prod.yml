@@ -47,3 +47,14 @@ logging:
   level:
     root: INFO
     com.kopo_team4.auth_backend: INFO
+
+
+# Actuator 메트릭스 설정
+management:
+  metrics:
+    system:
+      enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: health,info
