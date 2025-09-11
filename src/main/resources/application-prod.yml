@@ -2,6 +2,9 @@ server:
   port: ${PORT:8080}
 
 spring:
+  web:
+    resources:
+      static-locations: classpath:/static/,classpath:/public/,classpath:/resources/,classpath:/META-INF/resources/
   datasource:
     url: jdbc:${MYSQL_URL}
     username: ${MYSQLUSER}
@@ -39,8 +42,11 @@ jwt:
 springdoc:
   api-docs:
     enabled: true
+    path: /v3/api-docs
   swagger-ui:
     enabled: true
+    path: /swagger-ui.html
+    operationsSorter: method
 
 # 프로덕션 로깅 설정
 logging:
