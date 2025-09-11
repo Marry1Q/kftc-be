@@ -52,9 +52,9 @@ logging:
 # Actuator 메트릭스 설정
 management:
   metrics:
-    system:
-      enabled: false
+    enabled: false
   endpoints:
+    enabled-by-default: false
     web:
       exposure:
-        include: health,info
+        include: health
