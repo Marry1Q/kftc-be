@@ -3,27 +3,3 @@ spring:
     name: auth-backend
   profiles:
     active: ${SPRING_PROFILES_ACTIVE:local}
-
-server:
-  port: 8080
-
-# JWT 설정
-jwt:
-  secret-key: ${JWT_SECRET_KEY}
-
-# Swagger/OpenAPI 설정
-springdoc:
-  api-docs:
-    enabled: true
-    path: /v3/api-docs
-  swagger-ui:
-    enabled: true
-    path: /swagger-ui.html
-    operations-sorter: method
-    tags-sorter: alpha
-    try-it-out-enabled: true
-
-# 공통 로깅 설정
-logging:
-  level:
-    root: INFO

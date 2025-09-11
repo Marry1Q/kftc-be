@@ -1,3 +1,6 @@
+server:
+  port: ${PORT:8080}
+
 spring:
   datasource:
     url: ${DB_URL}
@@ -11,6 +14,7 @@ spring:
       max-lifetime: 1800000
       connection-timeout: 30000
       connection-test-query: SELECT 1
+  
   jpa:
     hibernate:
       ddl-auto: update
@@ -20,7 +24,26 @@ spring:
       hibernate:
         format_sql: false
         dialect: org.hibernate.dialect.MySQLDialect
+        connection:
+          characterEncoding: utf8
+          useUnicode: true
+  sql:
+    init:
+      mode: never
 
+# JWT 설정
 jwt:
   secret-key: ${JWT_SECRET_KEY}
-# 운영 환경에서만 사용하는 설정 추가 가능 (e.g. actuator, monitoring 등)
+
+# Swagger/OpenAPI 설정 (프로덕션에서는 보안상 비활성화 권장)
+springdoc:
+  api-docs:
+    enabled: false
+  swagger-ui:
+    enabled: false
+
+# 프로덕션 로깅 설정
+logging:
+  level:
+    root: INFO
+    com.kopo_team4.auth_backend: INFO
