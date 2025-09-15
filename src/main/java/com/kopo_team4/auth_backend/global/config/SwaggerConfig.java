@@ -20,7 +20,7 @@ public class SwaggerConfig {
                 .info(apiInfo())
                 .servers(List.of(
                         new Server().url("http://localhost:8082").description("Local Development Server"),
-                        new Server().url("http://43.201.115.255:8080").description("Production Server")
+                        new Server().url("https://kftc-be-production.up.railway.app").description("Production Server")
                 ))
                 .components(new Components()
                         .addSecuritySchemes("bearerAuth", 
