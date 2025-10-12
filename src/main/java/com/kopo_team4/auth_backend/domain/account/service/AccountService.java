@@ -462,6 +462,7 @@ public class AccountService {
                         .tranAmt(externalTrans.getTranAmt())
                         .afterBalanceAmt(externalTrans.getAfterBalanceAmt())
                         .branchName(externalTrans.getBranchName())
+                        .isSafeAccountDeposit(externalTrans.getIsSafeAccountDeposit())  // 안심계좌 입금 상태 추가
                         .build();
                 transactionList.add(transactionInfo);
             }

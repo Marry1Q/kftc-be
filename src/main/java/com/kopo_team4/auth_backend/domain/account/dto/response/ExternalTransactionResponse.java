@@ -42,5 +42,7 @@ public class ExternalTransactionResponse {
         private String tranAmt;
         private String afterBalanceAmt;
         private String branchName;
+
+        private Boolean isSafeAccountDeposit;
     }
 } 

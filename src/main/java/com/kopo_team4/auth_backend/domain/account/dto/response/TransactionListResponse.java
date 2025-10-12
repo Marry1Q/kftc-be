@@ -66,5 +66,8 @@ public class TransactionListResponse {
         
         @Schema(description = "취급점명", example = "서울지점")
         private String branchName;
+
+        @Schema(description = "안심계좌 입금 여부", example = "true")
+        private Boolean isSafeAccountDeposit;
     }
 } 
